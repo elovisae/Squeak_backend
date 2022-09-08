@@ -4,7 +4,8 @@
   "description": "This is the squeak backend for https://github.com/JesperHagman/Squeak.git",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   },
   "homepage": "https://github.com/elovisae/Squeak_backend#readme",
   "dependencies": {
-    "env-cmd": "^10.1.0",
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "firebase": "^9.9.4"
   }
