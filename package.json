@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/elovisae/Squeak_backend/issues"
   },
-  "homepage": "https://github.com/elovisae/Squeak_backend#readme"
+  "homepage": "https://github.com/elovisae/Squeak_backend#readme",
+  "dependencies": {
+    "env-cmd": "^10.1.0",
+    "express": "^4.18.1",
+    "firebase": "^9.9.4"
+  }
 }
