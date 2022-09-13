@@ -29,7 +29,7 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
     if (!user && res.status(400)) {
       res.send({
-        message: 'E-postadressen finns inte registrerad'
+        message: 'E-mail is not registered'
       })
       return
     }
@@ -37,7 +37,7 @@ router.post("/login", async (req, res) => {
     const valid = await bcrypt.compare(req.body.password, user.password);
     if (!valid && res.status(400)){
       res.send({
-        message: 'Lösenordet är felaktigt'
+        message: 'Password is incorrect'
       })
       return
     }
