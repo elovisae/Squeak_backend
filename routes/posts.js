@@ -85,7 +85,7 @@ router.post("/", async (req, res) => {
  *       - in: path
  *         name: id
  *         required: true
- *         description: Numeric ID of the user to retrieve.
+ *         description: The post id.
  *         example: 6319f3652fff92c2f082ba3a
  *         schema:
  *           type: string
