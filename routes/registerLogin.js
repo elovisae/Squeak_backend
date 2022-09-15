@@ -12,7 +12,7 @@ router.post("/register", async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: anomPassword,
-      phone: req.body.phone
+      phone: req.body.phone,
     });
 
     const user = await newUser.save();
@@ -29,27 +29,27 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
     if (!user && res.status(400)) {
       res.send({
-        message: 'E-mail is not registered'
-      })
-      return
+        message: "E-mail is not registered",
+      });
+      return;
     }
 
     const valid = await bcrypt.compare(req.body.password, user.password);
-    if (!valid && res.status(400)){
+    if (!valid && res.status(400)) {
       res.send({
-        message: 'Password is incorrect'
-      })
-      return
+        message: "Password is incorrect",
+      });
+      return;
     }
-  
+
     const { password, ...others } = user._doc;
 
     res.send({
+      user,
       status: 200,
       message: "Inloggad",
-      loggedIn: true
-    })
-   
+      loggedIn: true,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
