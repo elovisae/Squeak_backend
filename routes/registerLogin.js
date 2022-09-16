@@ -153,6 +153,7 @@ router.post("/login", async (req, res) => {
     const { password, ...others } = user._doc;
 
     res.send({
+      user,
       status: 200,
       message: "Inloggad",
       loggedIn: true,
