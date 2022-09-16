@@ -7,7 +7,8 @@
     "test-vb": "jest --verbose --colors",
     "test": "jest --detectOpenHandles --colors",
     "start": "node server.js",
-    "nodemon": "nodemon server.js"
+    "nodemon": "nodemon server.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
