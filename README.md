@@ -58,6 +58,20 @@ or
 ``` bash
 npm run test-vb
 ```
+
+## API:
+How to find the manual:
+``` bash
+nodemon server.js
+```
+
+In your browser:
+
+`PORT/api-docs  # (Ex: http://localhost:5001/api-docs)`
+
+There you go!
+RTFM
+
 ## Packages:
 ### Dependencies:
 - Bcrypt
