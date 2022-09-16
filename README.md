@@ -30,4 +30,19 @@ nodemon server.js
 ```
 
 
+## Packages:
+### Dependencies:
+- Bcrypt
+- Cors
+- Dotenv
+- Express
+- Mongoose
+
+## Dev dependencies:
+- Husky
+- Nodemon
+- Swagger-jsdoc
+- Swagger-ui-express
+- Jest
+- Supertest
 
