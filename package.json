@@ -4,8 +4,8 @@
   "description": "This is the squeak backend for https://github.com/JesperHagman/Squeak.git",
   "main": "server.js",
   "scripts": {
-    "test-vb": "jest --verbose --colors",
-    "test": "jest --detectOpenHandles --colors",
+    "test-open": "jest --detectOpenHandlers --colors",
+    "test": "jest --verbose --colors",
     "start": "node server.js",
     "nodemon": "nodemon server.js",
     "prepare": "husky install"
@@ -28,7 +28,6 @@
     "mongoose": "^6.5.5",
     "swagger-jsdoc": "^6.2.5",
     "swagger-ui-express": "^4.5.0"
-
   },
   "devDependencies": {
     "husky": "^8.0.1",
