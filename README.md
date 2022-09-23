@@ -1,7 +1,13 @@
 # Squeak_backend
 This is the squeak backend for https://github.com/JesperHagman/Squeak.git
 
-## TTFHW For backend developers
+## Table of content
+* [TTHFW](#TFFHW)
+* [API](#API)
+* [Technologies](#Technologies) 
+* [Authentification Flow](#authentification-flow)
+
+## TTFHW for developers
 
 ``` bash
 cd <your-workspace>
@@ -29,7 +35,7 @@ Then, to start the server:
 nodemon server.js
 ```
 
-## TTFHW For testers
+## TTFHW for testers
 
 ``` bash
 cd <your-workspace>
@@ -52,7 +58,7 @@ MONGO_URL = <your-mongo-db-connection-string>
 *More info on how to find your connection string: https://www.mongodb.com/docs/guides/atlas/connection-string/*
 
 ``` bash
-npm test
+npm test 
 ```
 or
 ``` bash
@@ -72,15 +78,21 @@ In your browser:
 There you go!
 RTFM
 
-## Packages:
-### Dependencies:
+## Technologies
+- *Heroku* will be used to deploy this server. The server may be found at https://squeak-backend.herokuapp.com/
+Visit https://devcenter.heroku.com/ to learn more about heroku 
+
+- *Mongo DB* is used for the database
+Visit https://www.mongodb.com/docs/ to learn more about Mongo DB
+
+#### Dependencies:
 - Bcrypt
 - Cors
 - Dotenv
 - Express
 - Mongoose
 
-## Dev dependencies:
+#### Dev dependencies:
 - Husky
 - Nodemon
 - Swagger-jsdoc
