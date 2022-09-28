@@ -1,8 +1,11 @@
 const app = require("./app");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const path = require("path");
 const PORT = process.env.PORT || 5001;
 
+const express = require("express");
+app.use("/images", express.static(path.join(__dirname, "/images")));
 mongoose
   .connect(
     process.env.MONGO_URL,
