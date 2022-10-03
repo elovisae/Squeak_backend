@@ -7,6 +7,7 @@ const dotenv = require("dotenv");
 const registerLoginRoute = require("./routes/registerLogin");
 const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
+const commentRoute = require("./routes/comments");
 
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
@@ -37,6 +38,7 @@ app.use(cors());
 app.use("/api/auth", registerLoginRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
+app.use("/api/comments", commentRoute);
 
 
 module.exports = app;

@@ -86,7 +86,7 @@ describe("When testing post API", () => {
 
 describe("When testing post API", () => {
   describe("given POST /api/posts", () => {
-    it.skip("should return status 200", async () => {
+    it("should return status 200", async () => {
       // const random = Math.floor(Math.random() * 10000000000).toString(36);
       const testPost = {
         desc: "This is the content",
