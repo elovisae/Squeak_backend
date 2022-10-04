@@ -155,11 +155,71 @@ router.get("/:id", async (req, res) => {
  *        200:
  *          description: Successfully got users, stored in array
  */
+/**
+ * @openapi
+ *  /api/users?user={username}:
+ *    get:
+ *      summary: Get user by query
+ *      description: This gets information on a user by using their username as a query
+ *      tags: [Users]
+ *      parameters:
+ *        - in: query
+ *          name: username
+ *          required: true
+ *          description: Username of the specific user. Use jondoe1 for an example
+ *          schema:
+ *            type: string
+ *      requestBody:
+ *        required: false
+ *      responses:
+ *        200:
+ *          description: Succesfully gets all posts from the specified user
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  data:
+ *                    type: object
+ *                    properties:
+ *                      _id:
+ *                        type: integer
+ *                        description: The user ID.
+ *                        example: 1
+ *                      name:
+ *                        type: string
+ *                        description: The user's name
+ *                        example: Jon Doe
+ *                      username:
+ *                        type: string
+ *                        description: The user's username
+ *                        example: jondoe1
+ *                      email:
+ *                        type: string
+ *                        description: The user's email.
+ *                        example: jon.doe@some.where
+ *                      password:
+ *                        type: string
+ *                        description: Crypted version of user's password.
+ *                        example: $2b$10$VslaWD/FtjvSDRcEo08b9eR0CfJG610f3uR2659dmFQOz0kEGOCl
+ *                      phone:
+ *                        type: string
+ *                        description: The user's phone number
+ *                        example: 0701234567
+ *                    
+ */
+
 
 // GET ALL USERS
 router.get("/", async (req, res) => {
+  const username = req.query.user;
   try {
-    const users = await User.find();
+    let users;
+   if(username){
+    users = await User.find({ username })
+   }else{
+    users = await User.find()
+   }
     res.status(200).json(users);
   } catch (err) {
     res.status(500).json(err);
