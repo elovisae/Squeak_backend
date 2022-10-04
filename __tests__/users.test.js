@@ -87,7 +87,7 @@ describe("When testing users API", () => {
 
   describe("given GET /api/users/{id}", () => {
     it("should return status 200", async () => {
-      const userID = "6319d202b97e4383784137db";
+      const userID = "631aea6027af069a690702bc";
       container = request(server);
       await container
         .get(`/api/users/${userID}`)
@@ -95,8 +95,8 @@ describe("When testing users API", () => {
         .expect("Content-type", "application/json; charset=utf-8")
         .then((res) => {
           expect(res.body._id).toEqual(userID);
-          expect(res.body.username).toEqual("Testuser");
-          expect(res.body.email).toEqual("test@t.com");
+          expect(res.body.username).toEqual("jondoe1");
+          expect(res.body.email).toEqual("jon.doe@some.where");
         });
     });
   });
